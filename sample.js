@@ -6,7 +6,7 @@ const fs = require('fs');
 // S3 bucket name
 var bucketName = 'node-sdk-sample-571ebd8f-aafd-4746-b9db-0a2483fcfd74';
 // Create name for uploaded object key
-var keyName = 'SampleData1.mp3'; // <-- object name
+var keyName = 'Humanities-Class-Discussion.mp4'; // <-- object name
 
 /* Take mp3 from online submit button -> Store in AWS bucket node-sdk-sample-571ebd8f-aafd-4746-b9db-0a2483fcfd74*/
 
@@ -41,7 +41,7 @@ var start_params = {
     Media: { /* required */
       MediaFileUri: 's3://node-sdk-sample-571ebd8f-aafd-4746-b9db-0a2483fcfd74/SampleData1.mp3'
     },
-    TranscriptionJobName: 'SoundProcessJob2', /* required */
+    TranscriptionJobName: 'SoundProcessJob', /* required */
     ContentRedaction: {
       RedactionOutput: "redacted", /* required */
       RedactionType: "PII" /* required */
@@ -50,7 +50,7 @@ var start_params = {
       //AllowDeferredExecution: true || false,
       // DataAccessRoleArn: 'STRING_VALUE'
     },
-    MediaFormat: "mp3",
+    MediaFormat: "mp4",
     MediaSampleRateHertz: 44100,
     OutputBucketName: 'node-sdk-sample-571ebd8f-aafd-4746-b9db-0a2483fcfd74',
     // OutputEncryptionKMSKeyId: '1234abcd-12ab-34cd-56ef-1234567890ab',
