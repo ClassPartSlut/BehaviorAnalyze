@@ -1,8 +1,22 @@
-<div>
-    <label for='avatar'>Choose video or audio to upload:</label>
-    <form method='POST' action="/" >
-        <input type="file">
+<div style="text-align: center">
+    <form method="POST" action='/' enctype="multipart/form-data">
+            <div class="form-group">
+            <label style="font-size:40px">Choose video or audio to upload</label>
+                <input type="file" class="form-control-file" name="file">
+            
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    
+    
 
 </div>
-
+<div class="row">
+    <div class="column">
+        <img src="../img/bg1.jpg" style="width:100%" alt="background1">
+    </div>
+    <div class="column">
+        <img src="../img/bg2.jpg" style="width:100%" alt="background2">
+    </div>
+</div>
