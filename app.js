@@ -20,7 +20,7 @@ app.get('/', (req, res)=>{
     // test it with dummy data first
 
     form_result = req.body;
-    res.render('home',{});
+    // res.render('home',{});
 
 });
 
@@ -32,8 +32,8 @@ app.post('/', (req, res)=>{
     .on('file', (name, file) => {
       console.log('Uploaded file', name, file)
     })
-    res.send('successfully uploaded!');
-    res.redirect('/');
+    res.redirect('/analysis');
+    
 
 });
 
@@ -41,16 +41,17 @@ app.get('/analysis', (req, res)=>{
     fs.readFile('dummy.json', (err, data)=>{
         if(err) {console.log(err);}
         text = JSON.parse(data);
-        res.render('analysis',{speakers : text['speakers']});
+        
+        res.sendFile(publicPath+'/analysis.html');
     });
     
 });
 
 app.get('/filter', (req, res)=>{
     const query = req.query['keywords'];
-    const filtered = text['speakers'].filter(person => person['text'].includes(query));
-    console.log(filtered);
-    res.render('analysis',{speakers: filtered});
+    // const filtered = text['speakers'].filter(person => person['text'].includes(query));
+    // console.log(filtered);
+    res.sendFile(publicPath+'/filtered.html');
 });
 
 // AWS.config.getCredentials(function(err) {
