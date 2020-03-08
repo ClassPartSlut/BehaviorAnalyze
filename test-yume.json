@@ -1,0 +1,8 @@
+{
+    "TranscriptionJobName": "SoundProcessJob", 
+    "LanguageCode": "en-US", 
+    "MediaFormat": "mp3", 
+    "Media": {
+        "MediaFileUri": "https://node-sdk-sample-571ebd8f-aafd-4746-b9db-0a2483fcfd74.s3.amazonaws.com/SampleData1.mp3"
+    }
+}

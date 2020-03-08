@@ -1,2 +1,5 @@
 node_modules
 .DS_Store
+aws-cli
+SampleData1.mp3
+aws-cli.xml
