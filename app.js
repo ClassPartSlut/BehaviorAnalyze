@@ -6,7 +6,7 @@ const fs = require('fs');
 const formidable = require('formidable');
 // const router = express.Router();
 app.set('view engine', 'hbs');
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 // serve the static files in public folder
 const publicPath = path.join(__dirname, 'public');
 app.use(express.static(publicPath));
