@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const fs = require('fs');
+// const AWS = require('aws-sdk');
+// const awstest = require('./sample.js');
+
 
 const formidable = require('formidable');
 // const router = express.Router();
@@ -31,7 +34,9 @@ app.post('/', (req, res)=>{
     })
     .on('file', (name, file) => {
       console.log('Uploaded file', name, file)
+      
     })
+   
     res.redirect('/analysis');
     
 

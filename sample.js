@@ -10,7 +10,7 @@ var keyName = 'Humanities-Class-Discussion.mp3'; // <-- object name
 
 /* Take mp3 from online submit button -> Store in AWS bucket node-sdk-sample-571ebd8f-aafd-4746-b9db-0a2483fcfd74*/
 
-
+function uploadToAws(){
 // Create a promise on S3 service object
 var bucketPromise = new AWS.S3({apiVersion: '2006-03-01'}).createBucket({Bucket: bucketName}).promise();
 
@@ -32,6 +32,15 @@ bucketPromise.then(
   function(err) {
     console.error(err, err.stack);
 });
+
+}
+module.exports = {
+  uploadToAws:uploadToAws
+}
+
+uploadToAws();
+
+
 
 /* startTranscriptionJob: Start Transcriptin process  */
 AWS.config.region = 'us-east-1';
@@ -82,3 +91,6 @@ var start_params = {
     else     console.log(data);           // successful response
   });
 
+
+
+  
